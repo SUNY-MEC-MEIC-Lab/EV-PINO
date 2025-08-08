@@ -11,7 +11,7 @@ setup(
     description='EV-PINO: Physics-Informed Neural Operator for Electric Vehicle Power Prediction',
     long_description=open('README.md').read(),
     long_description_content_type='text/markdown',
-    url='<your-github-repo-url>',
+    url='https://github.com/SUNY-MEC-MEIC-Lab/EV-PINO--A-Hybrid-Surrogate-for-EV-Parameter-and-Power-Estimation-Using-PINO',
     packages=find_packages(),
     install_requires=required,
     python_requires='==3.10.16',
