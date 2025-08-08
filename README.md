@@ -75,7 +75,10 @@ The primary entry points for using the models are the training and evaluation sc
 
 ### Model Training
 
-To train a model for a specific vehicle, use the `EVPINO_train.py` script. Specify the vehicle type as a positional argument. You can also provide a path to a specific training data CSV file.
+To train a model for a specific vehicle, use the `EVPINO_train.py` script.
+You need to set the initial bounds for the parameters in realistic ranges (e.g., sedan = [1000,2000], SUV = [2000,3000]).
+If you know some of the values briefly (like factory specs), then it will help the model converge more reliably.
+Specify the vehicle type as a positional argument. You can also provide a path to a specific training data CSV file.
 
 ```bash
 # Train with default settings for a specific vehicle
