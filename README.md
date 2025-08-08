@@ -1,9 +1,10 @@
-# EV-PINO: Physics-Informed Neural Operator for Electric Vehicle Battery Power Prediction
-
+# EV-PINO: EV-PINO: A Hybrid Surrogate for Electric Vehicle Parameter and Power Estimation Using Physics-Informed Neural Operator
 This repository contains the source code for the EV-PINO project, which implements a Physics-Informed Neural Operator (PINO) to accurately predict battery power consumption for Electric Vehicles (EVs). The models are trained and evaluated on real-world driving datasets from the Tesla Model 3, and Tesla Model S, and Kia EV9.
 
-## Core Concepts
+**Abstract**
+This paper presents EV-PINO, a hybrid surrogate model that couples a deterministic Electric Vehicle power model with a Physics-Informed Neural Operator for EV dynamics estimation. The model maps vehicle speed and acceleration data to key dynamic parameters—including aerodynamic drag, rolling resistance, mass, motor efficiency, regenerative braking efficiency, and auxiliary power. These learned parameters then drive a deterministic physics plant to produce final battery-power predictions. Validated on real-world driving data from a Tesla Model 3, Model S, and Kia EV9, EV-PINO excels at accurately identifying parameters that reflect the vehicle’s true, current operating state. This capability is crucial as it accounts for real-world variations from component aging, changing loads, and auxiliary system use, which are not captured by static factory specs. The model captures global sequence context with FFT spectral layers for efficient training and inference. The EV-PINO framework is modular, robust against distribution shifts and noise, and highly interpretable. It provides a practical surrogate for EV energy prediction and monitoring.
 
+## Core Concepts
 EV-PINO uses Fourier Neural Operators as its backbone. In process of mapping velocity and acceleration data into Battery Power, it estimates key parameters for EV dynamics:
 
 - **Aerodynamic drag forces** (C<sub>d</sub>)
@@ -109,12 +110,8 @@ Specific evaluation scripts are also available for each model (e.g., `PINO_EV9_t
 
 **Tesla Model S and Kia EV9 Training Data:** The training and testing datasets for Tesla Model S and Kia EV9 models cannot be publicly released as we have not yet received open sourcing permission from our partner organizations. However, pre-trained model weights (`.pt` files) and training logs are available in the repository for reference and evaluation purposes.
 
-For researchers interested in the Tesla S or EV9 models, please refer to the provided model weights and training logs to understand the model performance and characteristics.
+For researchers interested in the Tesla S or EV9 models, please refer to the provided model weights and training logs.
 
 ## Citation
 
-If you use this code or the accompanying research in your work, please cite the original paper:
-
-```
-[Please add the full citation for your paper here]
-```
+If you use this code or the accompanying research in your work, please cite the original paper.
